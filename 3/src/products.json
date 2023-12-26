@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "title": "updated product",
+        "description": "This is a trial product",
+        "price": 200,
+        "thumbnail": "No image",
+        "code": "abc185",
+        "stock": 25
+    },
+    {
+        "id": 2,
+        "title": "trial product",
+        "description": "This is a trial product",
+        "price": 200,
+        "thumbnail": "No image",
+        "code": "abc175",
+        "stock": 25
+    },
+    {
+        "id": 3,
+        "title": "trial product",
+        "description": "This is a trial product",
+        "price": 200,
+        "thumbnail": "No image",
+        "code": "abc165",
+        "stock": 25
+    },
+    {
+        "id": 4,
+        "title": "trial product",
+        "description": "This is a trial product",
+        "price": 200,
+        "thumbnail": "No image",
+        "code": "abc155",
+        "stock": 25
+    },
+    {
+        "id": 5,
+        "title": "trial product",
+        "description": "This is a trial product",
+        "price": 200,
+        "thumbnail": "No image",
+        "code": "abc145",
+        "stock": 25
+    },
+    {
+        "id": 6,
+        "title": "trial product",
+        "description": "This is a trial product",
+        "price": 200,
+        "thumbnail": "No image",
+        "code": "abc135",
+        "stock": 25
+    },
+    {
+        "id": 7,
+        "title": "trial product",
+        "description": "This is a trial product",
+        "price": 200,
+        "thumbnail": "No image",
+        "code": "abc124",
+        "stock": 25
+    },
+    {
+        "id": 8,
+        "title": "trial product",
+        "description": "This is a trial product",
+        "price": 200,
+        "thumbnail": "No image",
+        "code": "abc325",
+        "stock": 25
+    },
+    {
+        "id": 9,
+        "title": "trial product",
+        "description": "This is a trial product",
+        "price": 200,
+        "thumbnail": "No image",
+        "code": "abc225",
+        "stock": 25
+    },
+    {
+        "id": 10,
+        "title": "trial product",
+        "description": "This is a trial product",
+        "price": 200,
+        "thumbnail": "No image",
+        "code": "abc125",
+        "stock": 25
+    }
+]

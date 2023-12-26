@@ -1,0 +1,13 @@
+[
+    {
+        "id": 1,
+        "title": "updated product",
+        "description": "This is a trial product",
+        "price": 200,
+        "thumbnail": "No image",
+        "code": "abc185",
+        "stock": 25,
+        "status": true,
+        "category": "Vegan & Gluten Free"
+    }
+]

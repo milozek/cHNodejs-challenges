@@ -1,0 +1,36 @@
+<h1>Create product</h1>
+<form action="/realtimeproducts" id="form-product" method="post">
+
+    <label for="title">title</label><input type="text" name="title" id="" />
+    <label for="description">description</label><input type="text" name="description" id="" />
+    <label for="price">price</label><input type="text" name="price" id="" />
+    <label for="code">code</label><input type="text" name="code" id="" />
+    <label for="stock">stock</label><input type="text" name="stock" id="" />
+    <label for="category">category</label><input type="text" name="category" id="" />
+
+    <input type="submit" value="Create product" /></form>
+
+<h2>Real time products:</h2>
+
+<div id="log-products">
+    {{#each payload}}
+        <ul>
+            <li><b>id: </b>{{this.id}}</li>
+            <li><b>title: </b>{{this.title}}</li>
+            <li><b>description: </b>{{this.description}}</li>
+            <li><b>price: </b>{{this.price}}</li>
+            <li><b>code: </b>{{this.code}}</li>
+            <li><b>status: </b>{{this.status}}</li>
+            <li><b>stock: </b>{{this.stock}}</li>
+            <li><b>category: </b>{{this.category}}</li>
+            <hr style="background-color:rgb(161, 161, 161); height: 10px;" />
+        </ul>
+    {{/each}}
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/index.js"></script>
+
+{{! <form id="form-product">
+    <input id="input-product" type="text" placeholder="Enter a product" required />
+    <input type="submit" value="Send" />
+</form> }}
