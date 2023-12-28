@@ -2,8 +2,8 @@ import passport from "passport"
 import { Strategy as LocalStrategy } from "passport-local"
 import { Strategy as GithubStrategy } from "passport-github2"
 import { Strategy as JwtStrategy, ExtractJwt } from "passport-jwt"
-import UserModel from "../models/product.model.js"
 import { createHash, isValidPassword, JWT_SECRET } from "../utils.js"
+import UserModel from "../dao/models/user.model.js"
 
 export const init = () => {
     const registerOpts = {

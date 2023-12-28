@@ -1,8 +1,8 @@
 import { Router } from "express"
 
-import ProductModel from "../../dao/models/product.model.js"
+import UserModel from "../../dao/models/user.model.js"
 
-import { createHash, verifyPassword, createToken } from "../../utils.js"
+import { createHash, verifyToken, generateToken } from "../../utils.js"
 
 const router = Router()
 
@@ -15,13 +15,13 @@ router.post("/auth/register", async (req, res) => {
         return res.status(400).json({ message: "All the fields are required" })
     }
 
-    let user = await ProductModel.findOne({ email })
+    let user = await UserModel.findOne({ email })
 
     if (user) {
         return res.status(400).json({ message: "You are registered already" })
     }
 
-    user = await ProductModel.create({
+    user = await UserModel.create({
         first_name,
         last_name,
         dni,
@@ -38,19 +38,19 @@ router.post("/auth/login", async (req, res) => {
         return res.status(401).json({ message: "Invalid mail or password" })
     }
 
-    const user = await ProductModel.findOne({ email })
+    const user = await UserModel.findOne({ email })
 
     if (!user) {
         return res.status(401).json({ message: "Invalid mail or password" })
     }
 
-    const isNotValidPassword = !verifyPassword(password, user)
+    const isNotValidPassword = !verifyToken(password, user)
 
     if (isNotValidPassword) {
         return res.status(401).json({ message: "Invalid mail or password" })
     }
 
-    const token = createToken(user)
+    const token = generateToken(user)
 
     res.cookie("access_token", token, { maxAge: 1000 * 60 * 30, httpOnly: true, signed: true })
         .status(200)

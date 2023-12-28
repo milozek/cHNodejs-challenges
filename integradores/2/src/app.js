@@ -5,7 +5,7 @@ import passport from "passport"
 import path from "path"
 
 import indexRouter from "./routers/views/index.router.js"
-import productsRouter from "./routers/api/products.router.js"
+import usersRouter from "./routers/api/users.router.js"
 import cartRouter from "./routers/api/carts.router.js"
 import authRouter from "./routers/api/auth.router.js"
 import { init as initPassport } from "./config/passport.config.js"
@@ -27,7 +27,7 @@ initPassport()
 app.use(passport.initialize())
 
 app.use("/", indexRouter)
-app.use("/api", authRouter, productsRouter, cartRouter)
+app.use("/api", authRouter, usersRouter, cartRouter)
 
 app.use((error, req, res, next) => {
     const message = `Unknown error ${error.message}`

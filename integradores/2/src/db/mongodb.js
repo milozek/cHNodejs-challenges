@@ -1,12 +1,14 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose"
+import dotenv from "dotenv"
 
-export const URI = 'mongodb+srv://developer:QmSQ489uyGo2WqJk@cluster0.beaz15s.mongodb.net/ecommerce';
+dotenv.config()
 
+export const URI = process.env.MONGODB_URI
 export const init = async () => {
-  try {
-    await mongoose.connect(URI);
-    console.log('Database connected 🚀');
-  } catch (error) {
-    console.error('Error to connect to database', error.message);
-  }
-};
+    try {
+        await mongoose.connect(URI)
+        console.log("Database connected 🚀")
+    } catch (error) {
+        console.error("Error to connect to database", error.message)
+    }
+}

@@ -36,7 +36,7 @@ router.get(
 router.get(
     "/carts/",
     passport.authenticate("jwt", { session: false }),
-    authMiddleware(["admin"]),
+    authMiddleware(["user", "premium_user", "admin"]),
     async (req, res) => {
         const carts = await CartModel.find({})
         res.status(200).json(carts)
